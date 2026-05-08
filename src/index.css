@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-astro: #001F4C;
+  --color-orion: #C9A26A;
+  --color-clark: #FFFFFF;
+  --color-neon-cyan: #00f3ff;
+  --color-neon-purple: #b500ff;
+  --color-neon-pink: #ff00ea;
+  --font-heading: 'Outfit', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-astro);
+    color: var(--color-clark);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.015em;
+  }
+}
+
+.antigravity-card {
+  animation: var(--animate-float);
+}
+
+.card-0 { animation-delay: 0s; }
+.card-1 { animation-delay: 1s; }
+.card-2 { animation-delay: 2s; }
+.card-3 { animation-delay: 3s; }
+.card-4 { animation-delay: 4s; }
+.card-5 { animation-delay: 5s; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #001F4C;
+}
+::-webkit-scrollbar-thumb {
+  background: #C9A26A;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A07F51;
+}
