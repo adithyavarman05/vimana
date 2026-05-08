@@ -57,8 +57,8 @@ export default function App() {
         </div>
         <div className="hidden md:flex space-x-8 text-sm font-medium tracking-wider text-clark/80">
           <a href="#hero" className="hover:text-neon-cyan transition-colors">Mission</a>
-          <a href="#team" className="hover:text-neon-cyan transition-colors">Leadership</a>
           <a href="#products" className="hover:text-neon-cyan transition-colors">Fleet</a>
+          <a href="#team" className="hover:text-neon-cyan transition-colors">Leadership</a>
         </div>
       </nav>
 
@@ -94,38 +94,6 @@ export default function App() {
             <span>Explore The Fleet</span>
             <ChevronRight size={18} />
           </motion.button>
-        </div>
-      </section>
-
-      {/* Leadership Section */}
-      <section id="team" className="relative z-10 py-24 px-8 bg-black/20 backdrop-blur-sm border-y border-clark/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Command <span className="text-neon-cyan">Core</span></h2>
-            <div className="w-16 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto rounded-full" />
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16">
-            {teamMembers.map((member, index) => (
-              <div 
-                key={member.id}
-                onClick={() => setSelectedMember(member)}
-                className={`flex flex-col items-center cursor-pointer group antigravity-card card-${index}`}
-              >
-                <div className="relative mb-6">
-                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-neon-cyan/30 group-hover:border-neon-purple transition-colors duration-500 p-1 bg-gradient-to-br from-astro via-astro to-neon-purple/20 overflow-hidden flex items-center justify-center">
-                    <div className="w-full h-full rounded-full bg-astro flex items-center justify-center text-4xl font-bold text-clark/50 group-hover:text-neon-cyan transition-colors group-hover:scale-110 duration-500 shadow-inner">
-                      {member.name.charAt(0)}
-                    </div>
-                  </div>
-                  {/* Subtle orbit ring */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-neon-cyan/10 rounded-full group-hover:border-neon-pink/40 transition-colors animate-[spin_10s_linear_infinite]" />
-                </div>
-                <h3 className="text-xl font-medium text-clark mb-1 text-center group-hover:text-neon-cyan transition-colors">{member.name}</h3>
-                <p className="text-sm text-clark/50 uppercase tracking-widest text-center">{member.title}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -202,7 +170,38 @@ export default function App() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
 
+      {/* Leadership Section */}
+      <section id="team" className="relative z-10 py-24 px-8 bg-black/20 backdrop-blur-sm border-t border-clark/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Command <span className="text-neon-cyan">Core</span></h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-neon-cyan to-neon-purple mx-auto rounded-full" />
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-16">
+            {teamMembers.map((member, index) => (
+              <div 
+                key={member.id}
+                onClick={() => setSelectedMember(member)}
+                className={`flex flex-col items-center cursor-pointer group antigravity-card card-${index}`}
+              >
+                <div className="relative mb-6">
+                  <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border-2 border-neon-cyan/30 group-hover:border-neon-purple transition-colors duration-500 p-1 bg-gradient-to-br from-astro via-astro to-neon-purple/20 overflow-hidden flex items-center justify-center">
+                    <div className="w-full h-full rounded-full bg-astro flex items-center justify-center text-4xl font-bold text-clark/50 group-hover:text-neon-cyan transition-colors group-hover:scale-110 duration-500 shadow-inner">
+                      {member.name.charAt(0)}
+                    </div>
+                  </div>
+                  {/* Subtle orbit ring */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-neon-cyan/10 rounded-full group-hover:border-neon-pink/40 transition-colors animate-[spin_10s_linear_infinite]" />
+                </div>
+                <h3 className="text-xl font-medium text-clark mb-1 text-center group-hover:text-neon-cyan transition-colors">{member.name}</h3>
+                <p className="text-sm text-clark/50 uppercase tracking-widest text-center">{member.title}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
