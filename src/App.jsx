@@ -16,12 +16,12 @@ import {
 
 // Data
 const teamMembers = [
-  { id: 1, name: "Steve Ambuul", title: "Chief Executive Officer", specialty: "Strategic vision and enterprise drone operations scaling." },
-  { id: 2, name: "Mel Phelps Cevik", title: "Chief Operations Officer", specialty: "Streamlining manufacturing and global supply chain logistics." },
-  { id: 3, name: "Alden Dale", title: "Lead Systems Engineer", specialty: "Custom FPV architectures and proprietary flight controllers." },
-  { id: 4, name: "Kaley Deneen", title: "Head of Payload Integration", specialty: "Designing modular mounts for cinematic and industrial sensors." },
-  { id: 5, name: "Tony Eades", title: "Flight Dynamics Specialist", specialty: "Aerodynamic optimization and high-speed stability." },
-  { id: 6, name: "Megan Erickson", title: "Software Architect", specialty: "Autonomous navigation algorithms and edge computing." },
+  { id: 1, name: "Name 1", title: "Chief Executive Officer", specialty: "Strategic vision and enterprise drone operations scaling." },
+  { id: 2, name: "Name 2", title: "Chief Operations Officer", specialty: "Streamlining manufacturing and global supply chain logistics." },
+  { id: 3, name: "Name 3", title: "Lead Systems Engineer", specialty: "Custom FPV architectures and proprietary flight controllers." },
+  { id: 4, name: "Name 4", title: "Head of Payload Integration", specialty: "Designing modular mounts for cinematic and industrial sensors." },
+  { id: 5, name: "Name 5", title: "Flight Dynamics Specialist", specialty: "Aerodynamic optimization and high-speed stability." },
+  { id: 6, name: "Name 6", title: "Software Architect", specialty: "Autonomous navigation algorithms and edge computing." },
 ];
 
 const fpvProducts = [
